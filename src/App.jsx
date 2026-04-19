@@ -9,6 +9,10 @@ function App() {
     bad: 0,
   });
 
+  const updateFeedback = feedbackType => {
+    setFeedback({ ...feedback, [feedbackType]: feedback[feedbackType] + 1 });
+  };
+
   const total = feedback.good + feedback.neutral + feedback.bad;
   return (
     <div>
@@ -23,6 +27,7 @@ function App() {
         neutral={feedback.neutral}
         bad={feedback.bad}
         total={total}
+        updateFeedback={updateFeedback}
       />
     </div>
   );
