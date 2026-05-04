@@ -28,7 +28,7 @@ const Options = ({ updateFeedback }) => {
         <button
           className={css.button}
           type="button"
-          onClick={() => updateFeedback}
+          onClick={() => updateFeedback('reset')}
         >
           Reset
         </button>
